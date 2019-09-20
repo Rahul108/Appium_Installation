@@ -108,3 +108,16 @@ To start appium
 ```sh
 appium
 ```
+Then install android studio and the leatest sdk’s
+Then on .bashrc
+```sh
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+```
+Then
+```sh
+android list sdk --all
+android list target
+```
+
