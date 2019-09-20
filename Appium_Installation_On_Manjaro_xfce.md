@@ -108,7 +108,10 @@ To start appium
 ```sh
 appium
 ```
-Then install android studio and the leatest sdk’s
+
+# Install Android SDK
+Install android studio and the leatest sdk’s
+
 Then on .bashrc
 ```sh
 export ANDROID_HOME="$HOME/Android/Sdk"
