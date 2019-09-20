@@ -49,4 +49,62 @@ Check installation
 mvn  -v
 ```
 # Install RVM
-install the mpapis public key. You’ll need it to avoid errors while downloading RVM.
+install the [mpapis public key](https://keybase.io/mpapis). You’ll need it to avoid errors while downloading RVM.
+```sh
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+```
+Then, proceed to install RVM with Ruby:
+```sh
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+source /home/rahul/.rvm/scripts/rvm
+```
+Once this is done, proceed to update RubyGems and Bundler:
+```sh
+gem update --system
+gem install -no-rdoc-no-ri bundler
+gem update
+gem cleanup
+```
+# Installing Node.js
+Install LinuxBrew first
+```sh
+pacman -Syu # CAUTION: this updates the whole system
+pacman -S base-devel
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+```
+Add path
+```sh
+export  PATH=”/home/linuxbrew/.linuxbrew/bin”
+```
+On .profile and .bash_profile, because of [This](https://github.com/Linuxbrew/brew/issues/711) issue
+```sh
+echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.profile
+echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >>~/.profile
+echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >>~/.profile
+```
+Then Check if brew installed properly or not
+```sh
+brew doctor
+```
+After installing Linuxbrew...
+```sh
+brew install node
+```
+# Install GRUNT
+```sh
+npm install -g grunt grunt-cli
+```
+# Install Appium
+```sh
+npm install -g appium
+npm install wd
+npm install -g appium-doctor
+```
+Check if there is any problem on the installation of appium or not
+```sh
+Appium-doctor
+```
+To start appium
+```sh
+appium
+```
