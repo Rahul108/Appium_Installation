@@ -109,6 +109,18 @@ Check if there is any problem on the installation of appium or not
 ```sh
 Appium-doctor
 ```
+
+On appium-doctor, there we find some issue that may not be solved by the instructions given there, as..
+
+for opencv
+```sh
+npm config set unsafe-perm true
+```
+then
+```sh
+npm i -g opencv4nodejs
+```
+
 To start appium
 ```sh
 appium
