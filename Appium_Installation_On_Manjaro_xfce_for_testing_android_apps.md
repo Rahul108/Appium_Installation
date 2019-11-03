@@ -112,7 +112,7 @@ Appium-doctor
 
 On appium-doctor, there we find some issue that may not be solved by the instructions given there, as..
 
-for opencv
+for opencv4nodejs -
 ```sh
 npm config set unsafe-perm true
 ```
