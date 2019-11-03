@@ -100,6 +100,11 @@ npm install -g appium
 npm install wd
 npm install -g appium-doctor
 ```
+If [This Issue](https://stackoverflow.com/questions/50678028/failed-at-the-appium-chromedriver4-0-0-install-script) occurs during the installation of appium then...
+```sh
+sudo npm install -g appium --unsafe-perm=true --allow-root
+```
+
 Check if there is any problem on the installation of appium or not
 ```sh
 Appium-doctor
